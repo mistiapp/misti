@@ -195,7 +195,7 @@ button:hover {
 }
 
 .main-logo {
-    max-width: 180px; 
+    max-width: 130px; 
     height: auto;
     display: block;
     filter: drop-shadow(0 0 10px rgba(0, 95, 106, 0.2)); 
