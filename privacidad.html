@@ -4,127 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad | Misti</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #005F6A;
-            --primary-dark: #002f35;
-            --bg-black: #050505;
-            --text-white: #ffffff;
-            --text-gray: #a0a0a0;
+        /* Ajustes para lectura legal profesional */
+        .legal-card { text-align: left; max-width: 800px; margin: 0 auto; }
+        .legal-card h1 { font-family: 'Baloo 2', cursive; color: var(--primary); font-size: 2.2rem; margin-bottom: 5px; }
+        .effective-date { color: var(--text-gray); font-size: 0.85rem; margin-bottom: 30px; display: block; }
+        
+        .legal-section { margin-bottom: 35px; }
+        .legal-section h2 { 
+            font-family: 'Baloo 2', cursive; 
+            color: var(--primary); 
+            font-size: 1.5rem; 
+            margin-bottom: 15px; 
+            border-bottom: 1px solid var(--primary-light);
+            padding-bottom: 8px;
         }
-
-        /* Estilos base idénticos al Index */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at center, var(--primary-dark) 0%, var(--bg-black) 100%);
-            background-attachment: fixed;
-            color: var(--text-white);
-            line-height: 1.8;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+        
+        .legal-section p, .legal-section li { 
+            color: var(--text-gray); 
+            font-size: 1rem; 
+            line-height: 1.7; 
+            margin-bottom: 12px;
         }
-
-        /* Efecto de grano idéntico */
-        .noise {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.04;
-            pointer-events: none;
-            z-index: 10;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-
-        .container {
-            width: 90%;
-            max-width: 700px;
-            padding: 60px 0;
-            position: relative;
-            z-index: 2;
-        }
-
-        .back-link {
+        
+        .legal-section ul { padding-left: 20px; list-style-type: none; }
+        .legal-section ul li::before {
+            content: "•";
             color: var(--primary);
-            text-decoration: none;
-            font-weight: 700;
+            font-weight: bold;
             display: inline-block;
-            margin-bottom: 30px;
-            transition: 0.3s;
+            width: 1em;
+            margin-left: -1em;
         }
 
-        .back-link:hover {
-            color: white;
-            transform: translateX(-5px);
+        .highlight-box {
+            background: rgba(0, 95, 106, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px 12px 12px 4px;
         }
 
-        /* Tarjeta efecto cristal idéntica a la waitlist-card */
-        .legal-card {
-            background: rgba(13, 13, 13, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        .back-link { 
+            display: inline-block; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 800; 
+            margin-bottom: 25px; 
+            font-size: 0.95rem; 
         }
-
-        h1 { color: var(--primary); font-size: 2rem; font-weight: 800; margin-top: 0; }
-        h2 { color: var(--primary); font-size: 1.3rem; margin-top: 35px; border-bottom: 1px solid rgba(0, 95, 106, 0.2); padding-bottom: 10px; }
+        .back-link:hover { text-decoration: underline; }
         
-        .highlight { color: white; font-weight: 600; }
-        
-        ul { padding-left: 20px; color: var(--text-gray); }
-        li { margin-bottom: 10px; }
-        p { color: var(--text-gray); }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            font-size: 0.85rem;
-            color: #555;
-        }
+        strong { color: var(--primary); font-weight: 700; }
+        .important { color: var(--text-dark); font-weight: 800; }
     </style>
 </head>
 <body>
 
     <div class="noise"></div>
+    <div class="glow"></div>
 
-    <main class="container">
+    <main class="container" style="max-width: 750px;">
         <a href="index.html" class="back-link">← Volver a Misti</a>
         
-        <article class="legal-card">
+        <article class="waitlist-card legal-card">
             <h1>Política de Privacidad</h1>
-            <p style="font-size: 0.9rem;">Última actualización: Diciembre 2025</p>
+            <span class="effective-date">Fecha de Vigencia: 10 de Marzo de 2026</span>
 
-            <p>En <span class="highlight">Misti</span>, valoramos tu privacidad tanto como valoramos una buena conversación. Este documento explica cómo tratamos tus datos personales cuando te inscribes en nuestra lista de espera.</p>
+            <p class="sub-headline" style="color: var(--text-dark); font-weight: 500;">
+                Bienvenido a Misti. Tu privacidad es nuestra prioridad absoluta. Esta política explica qué información recopilamos, cómo la protegemos y los derechos que tienes sobre ella.
+            </p>
 
-            <h2>1. Responsable del Tratamiento</h2>
-            <p>El responsable de los datos recogidos en esta web es el equipo fundacional de Misti. Puedes contactarnos en: <span class="highlight">misti.appoficial@gmail.com</span></p>
+            <section class="legal-section">
+                <h2>1. Información que Recopilamos</h2>
+                <p>Recopilamos solo la información estrictamente necesaria para proporcionar el servicio de Misti de forma segura:</p>
+                <ul>
+                    <li><strong>Datos de Autenticación:</strong> Correo electrónico y credenciales gestionadas mediante protocolos de seguridad de Firebase Auth.</li>
+                    <li><strong>Datos del Perfil:</strong> Nombre, edad, género, biografía y, fundamentalmente, tus <strong>grabaciones de audio</strong> proporcionadas voluntariamente.</li>
+                    <li><strong>Datos de Interacción:</strong> Actividad de matches y mensajes cifrados para habilitar la comunicación.</li>
+                    <li><strong>Ubicación:</strong> Coordenadas GPS almacenadas <strong>solo</strong> cuando decides actualizar manualmente tu posición.</li>
+                </ul>
+            </section>
 
-            <h2>2. ¿Qué datos recogemos y para qué?</h2>
-            <ul>
-                <li><span class="highlight">Nombre:</span> Para dirigirnos a ti de forma personal.</li>
-                <li><span class="highlight">Correo electrónico:</span> Para enviarte tu invitación VIP y noticias exclusivas.</li>
-                <li><span class="highlight">Ciudad:</span> Para priorizar la apertura de la app en las zonas con más usuarios interesados.</li>
-            </ul>
+            <section class="legal-section">
+                <h2>2. Uso de la Información</h2>
+                <div class="highlight-box">
+                    <p class="important" style="margin-bottom: 0;">Jamás venderemos tus datos a terceros para fines comerciales o publicitarios.</p>
+                </div>
+                <ul>
+                    <li><strong>Funcionamiento:</strong> Para mostrar tu perfil a usuarios compatibles y habilitar el chat.</li>
+                    <li><strong>Seguridad:</strong> Para verificar perfiles y prevenir conductas abusivas en la comunidad.</li>
+                    <li><strong>Notificaciones:</strong> Avisos sobre actividad relevante y actualizaciones de seguridad.</li>
+                </ul>
+            </section>
 
-            <h2>3. Base legal para el tratamiento</h2>
-            <p>Tratamos tus datos bajo tu <span class="highlight">consentimiento explícito</span> al marcar la casilla de aceptación. No estás obligado a dárnoslos, pero sin ellos no podremos enviarte la invitación.</p>
+            <section class="legal-section">
+                <h2>3. Transparencia en la Ubicación</h2>
+                <p>Misti respeta tu privacidad física. <strong>No rastreamos tu ubicación en segundo plano</strong> ni almacenamos historiales de tus movimientos.</p>
+                <ul>
+                    <li><strong>Control Total:</strong> Solo accedemos al GPS en el momento exacto en que tú solicitas "Actualizar ubicación".</li>
+                    <li><strong>Finalidad:</strong> Se utiliza únicamente para calcular la distancia de proximidad con otros perfiles dentro de la red.</li>
+                </ul>
+            </section>
 
-            <h2>4. Tus derechos</h2>
-            <p>Tienes derecho a acceder, rectificar o suprimir tus datos en cualquier momento. Solo tienes que escribirnos un correo con el asunto "Baja Lista de Espera".</p>
+            <section class="legal-section">
+                <h2>4. Almacenamiento y Seguridad</h2>
+                <p>Tus datos se alojan en servidores de alta seguridad con medidas técnicas avanzadas:</p>
+                <ul>
+                    <li><strong>Infraestructura:</strong> Utilizamos Google Cloud y Firebase con cifrado de extremo a extremo en tránsito.</li>
+                    <li><strong>Protección de Audios:</strong> Aplicamos filtros de seguridad para asegurar que tus mensajes de voz solo sean accesibles por los destinatarios autorizados.</li>
+                </ul>
+            </section>
 
-            <h2>5. Seguridad</h2>
-            <p>Tus datos no serán vendidos, alquilados ni cedidos a terceras empresas. Los utilizamos exclusivamente para construir la comunidad de Misti.</p>
+            <section class="legal-section">
+                <h2>5. Tus Derechos y Eliminación de Datos</h2>
+                <p>Garantizamos el control total sobre tu información:</p>
+                <ul>
+                    <li><strong>Eliminación Permanente:</strong> Al solicitar la eliminación de tu cuenta desde el menú de Ajustes, toda tu información (perfil, mensajes, fotos y <strong>audios</strong>) se borrará de forma irreversible de nuestros servidores en un plazo máximo de 30 días.</li>
+                    <li><strong>Acceso y Rectificación:</strong> Puedes editar cualquier dato de tu perfil directamente desde la aplicación.</li>
+                </ul>
+            </section>
+
+            <section class="legal-section" style="margin-top: 50px; text-align: center;">
+                <p>Para dudas o ejercicio de tus derechos:</p>
+                <strong>misti.appoficial@gmail.com</strong>
+            </section>
         </article>
 
-        <footer>
-            © Misti 2025 | Conexiones auténticas a través de la voz.
+        <footer class="footer">
+            <div class="legal-footer">
+                © Misti 2026
+            </div>
         </footer>
     </main>
 

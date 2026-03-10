@@ -5,60 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Bienvenido a Misti! | Registro Confirmado</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .success-container {
+        .success-card {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 30px;
         }
         .icon-check {
-            font-size: 4rem;
+            font-size: 4.5rem;
             color: var(--primary);
-            margin-bottom: 20px;
-            display: block;
+            margin-bottom: 25px;
+            display: inline-block;
+            filter: drop-shadow(0 0 15px rgba(0, 95, 106, 0.3));
         }
         .thanks-title {
             font-family: 'Baloo 2', cursive;
-            font-size: 2.5rem;
-            color: var(--text-white);
-            margin-bottom: 10px;
+            font-size: 2.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.1;
         }
         .thanks-p {
             color: var(--text-gray);
             font-size: 1.1rem;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             line-height: 1.6;
         }
-        .btn-back {
-            display: inline-block;
-            background: var(--primary);
+        .btn-main {
+            display: block;
+            background: linear-gradient(135deg, var(--primary) 0%, #008291 100%);
             color: white;
-            padding: 15px 30px;
-            border-radius: 15px;
+            padding: 18px;
+            border-radius: 18px;
             text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-            margin: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(0, 95, 106, 0.2);
+            margin-bottom: 15px;
         }
-        .btn-back:hover {
-            background: var(--primary-hover);
+        .btn-main:hover {
             transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0, 95, 106, 0.3);
         }
-        .btn-outline {
-            display: inline-block;
-            background: transparent;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 15px;
+        .btn-outline-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #ffffff;
+            color: var(--primary);
+            padding: 16px;
+            border-radius: 18px;
             text-decoration: none;
             font-weight: 700;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: 0.3s;
-            margin: 10px;
+            border: 1px solid rgba(0, 95, 106, 0.2);
         }
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.05);
+        .btn-outline-social:hover {
+            background: #f0f7f7;
+            border-color: var(--primary);
+        }
+        .highlight-text {
+            color: var(--primary);
+            font-weight: 700;
         }
     </style>
 </head>
@@ -68,26 +78,24 @@
     <div class="glow"></div>
 
     <main class="container">
-        <div class="success-container">
-            <i class="fas fa-microphone-alt icon-check"></i>
-            <h1 class="thanks-title">¡Ya estás dentro!</h1>
+        <div class="waitlist-card success-card">
+            <h1 class="thanks-title">¡Ya eres parte de MISTI!</h1>
             <p class="thanks-p">
-                Tu plaza como miembro fundador de **Misti** ha sido reservada con éxito. 
-                Te enviaremos un email con el codigo en cuanto este listo para utilizar en tu ciudad.
+                Tu plaza como <span class="highlight-text">miembro fundador</span> de Misti ha sido reservada. 
+                Te enviaremos un código exclusivo a tu email en cuanto estemos listos en tu ciudad.
             </p>
 
             <div class="action-buttons">
-                <a href="index.html" class="btn-back">Volver al inicio</a>
-                <a href="https://www.instagram.com/mistiappoficial/" target="_blank" class="btn-outline">
-                    <i class="fab fa-instagram"></i> Síguenos en IG
+                <a href="index.html" class="btn-main">Volver al inicio</a>
+                <a href="https://www.instagram.com/mistiappoficial/" target="_blank" class="btn-outline-social">
+                    <i class="fab fa-instagram"></i> Síguenos en Instagram
                 </a>
             </div>
         </div>
 
-        <footer class="footer" style="margin-top: 100px;">
-            <p class="status">El futuro de las conexiones es sonoro.</p>
+        <footer class="footer" style="margin-top: 60px;">
             <div class="legal-footer">
-                <span>© Misti 2025</span>
+                <span>© Misti 2026</span>
             </div>
         </footer>
     </main>
