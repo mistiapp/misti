@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misti | Enamórate de la voz</title>
+    <title>Misti | Conexiones inesperadas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -19,11 +18,9 @@
             <div class="logo-container">
                 <img src="img/logo-misti-blanco.png" alt="Misti Logo" class="main-logo">
             </div>
-            
-            <h2 class="headline">Descubre conexiones inesperadas</h2>
+            <h2 class="headline">La personalidad importa</h2>
             <p class="sub-headline">
-                La primera comunidad exclusiva en España donde la personalidad tiene sonido. 
-                Sin fotos, sin prejuicios, solo conexiones reales.
+                Conecta personas a través de historias reales. Sin fotos, sin filtros visuales, solo la magia de la voz.
             </p>
         </header>
 
@@ -32,49 +29,47 @@
                 <div class="step-num">1</div>
                 <div class="step-content">
                     <h3>Vibe Check</h3>
-                    <p>Verificamos cada perfil para asegurar una comunidad real y segura.</p>
+                    <p>Comunidad real. Verificamos cada perfil para tu seguridad.</p>
                 </div>
             </div>
-
             <div class="step">
                 <div class="step-num">2</div>
                 <div class="step-content">
-                    <h3>Conecta</h3>
-                    <p>Escucha historias y reflexiones de personas cerca de ti. Sin el estrés del catálogo visual.</p>
+                    <h3>Conecta de Verdad</h3>
+                    <p>Escucha lo que tienen que decir. Sin el estrés de los catálogos de fotos.</p>
                 </div>
             </div>
-
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-content">
-                    <h3>Descubre</h3>
-                    <p>Cuando la conversación fluye, el misterio desaparece. Tú controlas el ritmo.</p>
+                    <h3>Misterio Revelado</h3>
+                    <p>Tú decides cuándo mostrar tu imagen. El control es siempre tuyo.</p>
                 </div>
             </div>
         </section>
 
-            <div class="cta-text">
-                <h3>Únete a la resistencia contra el scroll infinito.</h3>
-                <p>Estamos seleccionando a los primeros 100 miembros fundadores de cada ciudad para el lanzamiento exclusivo. Consigue tu acceso VIP antes de que cerremos la lista.</p>
-            </div>
+        <div class="cta-text">
+            <h3>Únete a la resistencia.</h3>
+            <p>Buscamos a las primeras 50 personas fundadoras de cada ciudad. Asegura tu acceso VIP antes del lanzamiento oficial.</p>
+        </div>
 
-        <section class="waitlist-card">
+        <section class="waitlist-card" id="form-container">
             <form action="https://formspree.io/f/mpqaywqg" method="POST" id="waitlist-form">
                 <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="city" placeholder="Tu ciudad (ej. Madrid)" required>
+                <input type="email" name="email" placeholder="Tu mejor email" required>
+                <input type="text" name="city" placeholder="Ciudad (ej. Madrid)" required>
                 
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required>
                     <label for="privacy">Acepto la <a href="privacidad.html">Política de Privacidad</a></label>
                 </div>
 
-                <button type="submit">Unirme a la lista de espera</button>
+                <button type="submit">Reservar mi plaza VIP</button>
             </form>
         </section>
 
         <footer class="footer">
-            <p class="status">Próximamente en las mejores ciudades de España.</p>
+            <p class="status">Próximamente en tu ciudad</p>
             
             <div class="social-links">
                 <a href="https://www.tiktok.com/@misti.app" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -82,48 +77,54 @@
             </div>
 
             <div class="legal-footer">
-                <span>© Misti 2025</span>
+                <span>© Misti 2026</span>
                 <span class="separator">|</span>
-                <a href="privacidad.html">Política de Privacidad</a>
+                <a href="privacidad.html">Privacidad</a>
             </div>
         </footer>
     </main>
+
 <script>
-  var form = document.getElementById("waitlist-form");
+  const form = document.getElementById("waitlist-form");
+  const container = document.getElementById("form-container");
   
   async function handleSubmit(event) {
     event.preventDefault();
-    var status = document.getElementById("form-status");
-    var data = new FormData(event.target);
-    
     const btn = form.querySelector('button');
-    btn.innerHTML = "Enviando...";
+    const originalBtnText = btn.innerHTML;
+    
+    btn.innerHTML = "Validando...";
     btn.disabled = true;
 
+    const data = new FormData(event.target);
+    
     fetch(event.target.action, {
       method: form.method,
       body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
+      headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
-        // MENSAJE DE ÉXITO
-        form.innerHTML = "<div style='text-align:center; padding: 20px;'><h3 style='font-family:Baloo 2; color:#005F6A;'>¡Te escuchamos pronto!</h3><p>Tu plaza VIP ha sido reservada. Te enviaremos un email con el código en cuanto este listo para utilizar en tu ciudad .</p></div>";
+        // MENSAJE DE ÉXITO ESTILIZADO
+        container.innerHTML = `
+          <div style="text-align:center; padding: 10px;">
+            <i class="fas fa-check-circle" style="color:#00f2ff; font-size: 3rem; margin-bottom: 20px;"></i>
+            <h3 style="font-family:'Baloo 2'; font-size: 1.8rem; color:#fff; margin-bottom: 10px;">¡Bienvenido al club!</h3>
+            <p style="color:#a0a0a0; font-size: 1rem; line-height: 1.5;">
+              Hemos guardado tu plaza. Te avisaremos en cuanto <strong>Misti</strong> esté listo en tu ciudad.
+            </p>
+          </div>`;
       } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            alert(data["errors"].map(error => error["message"]).join(", "));
-          } else {
-            alert("Oops! Algo salió mal, inténtalo de nuevo.");
-          }
-        })
+        alert("Hubo un error. Revisa los datos e intenta de nuevo.");
+        btn.innerHTML = originalBtnText;
+        btn.disabled = false;
       }
     }).catch(error => {
       alert("Error de conexión. Inténtalo más tarde.");
+      btn.innerHTML = originalBtnText;
+      btn.disabled = false;
     });
   }
-  form.addEventListener("submit", handleSubmit)
+  form.addEventListener("submit", handleSubmit);
 </script>
 
 </body>
