@@ -53,11 +53,11 @@
             <p>Buscamos a las primeras 50 personas fundadoras de cada ciudad. Asegura tu acceso VIP antes del lanzamiento oficial.</p>
         </div>
 
-        <section class="waitlist-card" id="form-container">
-            <form action="https://formspree.io/f/mpqaywqg" method="POST" id="waitlist-form">
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu mejor email" required>
-                <input type="text" name="city" placeholder="Ciudad (ej. Madrid)" required>
+       <section class="waitlist-card" id="form-container">
+            <form action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=00b393e0f0" method="POST" id="waitlist-form">
+                <input type="text" name="FNAME" placeholder="Tu nombre">
+                <input type="email" name="EMAIL" placeholder="Tu mejor email" required>
+                <input type="text" name="CITY" placeholder="Ciudad (ej. Madrid)">
                 
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required>
@@ -85,46 +85,16 @@
     </main>
 
 <script>
+  // Script simplificado para asegurar que Mailchimp reciba los datos correctamente
   const form = document.getElementById("waitlist-form");
   const container = document.getElementById("form-container");
   
-  async function handleSubmit(event) {
-    event.preventDefault();
+  form.addEventListener("submit", function() {
+    // Esto da una sensación visual de carga antes de que Mailchimp tome el control
     const btn = form.querySelector('button');
-    const originalBtnText = btn.innerHTML;
-    
     btn.innerHTML = "Validando...";
-    btn.disabled = true;
-
-    const data = new FormData(event.target);
-    
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        // MENSAJE DE ÉXITO ESTILIZADO
-        container.innerHTML = `
-          <div style="text-align:center; padding: 10px;">
-            <i class="fas fa-check-circle" style="color:#00f2ff; font-size: 3rem; margin-bottom: 20px;"></i>
-            <h3 style="font-family:'Baloo 2'; font-size: 1.8rem; color:#fff; margin-bottom: 10px;">¡Bienvenido al club!</h3>
-            <p style="color:#a0a0a0; font-size: 1rem; line-height: 1.5;">
-              Hemos guardado tu plaza. Te avisaremos en cuanto <strong>Misti</strong> esté listo en tu ciudad.
-            </p>
-          </div>`;
-      } else {
-        alert("Hubo un error. Revisa los datos e intenta de nuevo.");
-        btn.innerHTML = originalBtnText;
-        btn.disabled = false;
-      }
-    }).catch(error => {
-      alert("Error de conexión. Inténtalo más tarde.");
-      btn.innerHTML = originalBtnText;
-      btn.disabled = false;
-    });
-  }
-  form.addEventListener("submit", handleSubmit);
+    btn.style.opacity = "0.7";
+  });
 </script>
 
 </body>
