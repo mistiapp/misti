@@ -3,99 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Bienvenido a Misti! | Registro Confirmado</title>
+    <title>¡Apuntado para iOS! | Misti</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        /* AJUSTES CRÍTICOS PARA LECTURA */
         .success-card {
             text-align: center;
-            padding: 50px 30px;
+            padding: 60px 30px !important;
+            border: 2px solid var(--primary-light) !important;
         }
-        .icon-check {
-            font-size: 4.5rem;
+
+        .success-icon {
+            font-size: 5rem;
             color: var(--primary);
-            margin-bottom: 25px;
-            display: inline-block;
-            filter: drop-shadow(0 0 15px rgba(0, 95, 106, 0.3));
+            filter: drop-shadow(0 0 15px rgba(167, 219, 218, 0.8));
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 20px;
         }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
         .thanks-title {
             font-family: 'Baloo 2', cursive;
-            font-size: 2.4rem;
-            color: var(--primary);
+            font-size: 2.2rem;
+            color: var(--primary); /* Verde oscuro sobre blanco */
             margin-bottom: 15px;
             line-height: 1.1;
         }
+
         .thanks-p {
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            margin-bottom: 35px;
+            /* FORZAMOS COLOR OSCURO PARA QUE SE LEA */
+            color: #002f35 !important; 
+            font-size: 1.05rem;
             line-height: 1.6;
+            margin-bottom: 30px;
         }
-        .btn-main {
-            display: block;
-            background: linear-gradient(135deg, var(--primary) 0%, #008291 100%);
-            color: white;
+
+        .highlight-text {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* Botón de Instagram */
+        .btn-instagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--primary);
+            color: white !important;
             padding: 18px;
             border-radius: 18px;
             text-decoration: none;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 20px rgba(0, 95, 106, 0.2);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
-        .btn-main:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(0, 95, 106, 0.3);
+
+        .btn-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 95, 106, 0.2);
         }
-        .btn-outline-social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: #ffffff;
+
+        .btn-back-home {
+            display: inline-block;
             color: var(--primary);
-            padding: 16px;
-            border-radius: 18px;
             text-decoration: none;
             font-weight: 700;
-            border: 1px solid rgba(0, 95, 106, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
-        .btn-outline-social:hover {
-            background: #f0f7f7;
-            border-color: var(--primary);
-        }
-        .highlight-text {
-            color: var(--primary);
-            font-weight: 700;
+
+        /* La onda de voz en esta página debe ser oscura */
+        .voice-wave span {
+            background: var(--primary) !important;
         }
     </style>
 </head>
 <body>
 
     <div class="noise"></div>
-    <div class="glow"></div>
 
     <main class="container">
         <div class="waitlist-card success-card">
-            <h1 class="thanks-title">¡Ya eres parte de MISTI!</h1>
+            <div class="success-icon-wrapper">
+                <i class="fas fa-envelope-open-text success-icon"></i> </div>
+
+            <h1 class="thanks-title">¡Te avisaremos!</h1>
+            
             <p class="thanks-p">
-                Tu plaza como <span class="highlight-text">miembro fundador</span> de Misti ha sido reservada. 
-                Te enviaremos un código exclusivo a tu email en cuanto estemos listos en tu ciudad.
+                Hemos guardado tu email correctamente. Recibirás el aviso cuando <span class="highlight-text">Misti </span> esté disponible en la App Store.
             </p>
 
+            <div class="voice-wave" style="margin-bottom: 35px;">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
             <div class="action-buttons">
-                <a href="index.html" class="btn-main">Volver al inicio</a>
-                <a href="https://www.instagram.com/mistiappoficial/" target="_blank" class="btn-outline-social">
-                    <i class="fab fa-instagram"></i> Síguenos en Instagram
+                <a href="https://www.instagram.com/mistiappoficial/" target="_blank" class="btn-instagram">
+                    <i class="fab fa-instagram"></i> Síguenos en instagram
                 </a>
+                <br>
+                <a href="index.html" class="btn-back-home">← Volver a la web</a>
             </div>
         </div>
 
-        <footer class="footer" style="margin-top: 60px;">
-            <div class="legal-footer">
-                <span>© Misti 2026</span>
+        <footer class="footer">
+            <div class="legal-footer" style="color: white; opacity: 0.6;">
+                © Misti 2026
             </div>
         </footer>
     </main>

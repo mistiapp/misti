@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Misti | Conexiones inesperadas</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <div class="noise"></div>
-    <div class="glow"></div>
-
+    
     <main class="container">
         <header class="hero">
             <div class="logo-container">
                 <img src="img/logo-misti-blanco.png" alt="Misti Logo" class="main-logo">
             </div>
-            <h2 class="headline">La personalidad importa</h2>
-            <p class="sub-headline">
-                Conecta a través de historias reales. Sin fotos, solo la magia de la voz.
-            </p>
+            <h1 class="headline">La personalidad importa</h1>
+            <p class="sub-headline">Conecta a través de historias reales. Sin fotos, solo la magia de la voz.</p>
 
-            <div class="store-container" style="margin-top: 30px;">
+            <div class="voice-wave">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="store-container">
                 <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="google-play-button">
                     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" class="play-store-img">
                 </a>
-                <p class="store-hint">Dale a "Registrar" y sé de los primeros</p>
+                <p class="store-hint">Regístrate para ser de los primeros</p>
             </div>
         </header>
 
@@ -43,48 +44,47 @@
                 <div class="step-num">2</div>
                 <div class="step-content">
                     <h3>Conecta de Verdad</h3>
-                    <p>Escucha lo que tienen que decir. Sin catálogos de fotos.</p>
+                    <p>Escucha lo que tienen que decir. Sin el estrés de las fotos.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-content">
                     <h3>Misterio Revelado</h3>
-                    <p>Las fotos perfil se revelan mientras hablais, solo cuando la conexión es real y mutua.</p>
+                    <p>Las fotos se revelan mientras habláis, solo si la conexión es mutua.</p>
                 </div>
             </div>
         </section>
 
         <div class="divider"><span><i class="fab fa-apple"></i></span></div>
 
-        <div class="cta-text ios-notice">
-            <h3>¿Usas iPhone?</h3>
-            <p>Misti llegará pronto a la App Store. Déjanos tu email y te avisaremos el día del lanzamiento.</p>
-        </div>
+        <section class="ios-section">
+            <div class="cta-text">
+                <h3>¿Usas iPhone?</h3>
+                <p>Déjanos tu email y te avisaremos en cuanto estemos en la App Store.</p>
+            </div>
 
-        <section class="waitlist-card" id="form-container">
-            <form action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=00b393e0f0" method="POST" id="waitlist-form">
-                <input type="text" name="FNAME" placeholder="Tu nombre">
-                <input type="email" name="EMAIL" placeholder="Tu email" required>
-                <input type="text" name="CITY" placeholder="Ciudad (ej. Zarautz)">
-                
-                <div class="checkbox-container">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">Acepto la <a href="privacidad.html">Política de Privacidad</a></label>
-                </div>
+            <div class="waitlist-card" id="form-container">
+                <form action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=00b393e0f0" method="POST" id="waitlist-form">
+                    <input type="text" name="FNAME" placeholder="Tu nombre">
+                    <input type="email" name="EMAIL" placeholder="Tu email" required>
+                    <input type="text" name="CITY" placeholder="Ciudad (ej. Zarautz)">
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Acepto la <a href="privacidad.html">Privacidad</a></label>
+                    </div>
 
-                <button type="submit" class="btn-ios">Avísame cuando esté en ios</button>
-            </form>
+                    <button type="submit" class="btn-ios">Avisarme del lanzamiento</button>
+                </form>
+            </div>
         </section>
 
         <footer class="footer">
-            <p class="status">Próximamente en tu ciudad</p>
-            
             <div class="social-links">
-                <a href="https://www.tiktok.com/@misti.app" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/mistiappoficial/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mistisocial" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/mistiappoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-
             <div class="legal-footer">
                 <span>© Misti 2026</span>
                 <span class="separator">|</span>
@@ -93,16 +93,11 @@
         </footer>
     </main>
 
-<script>
-  const form = document.getElementById("waitlist-form");
-  const container = document.getElementById("form-container");
-  
-  form.addEventListener("submit", function() {
-    const btn = form.querySelector('button');
-    btn.innerHTML = "Validando...";
-    btn.style.opacity = "0.7";
-  });
-</script>
-
+    <script>
+        const form = document.getElementById("waitlist-form");
+        form.addEventListener("submit", () => {
+            form.querySelector('button').innerHTML = "Validando...";
+        });
+    </script>
 </body>
 </html>
