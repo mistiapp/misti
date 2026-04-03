@@ -20,8 +20,15 @@
             </div>
             <h2 class="headline">La personalidad importa</h2>
             <p class="sub-headline">
-                Conecta personas a través de historias reales. Sin fotos, sin filtros visuales, solo la magia de la voz.
+                Conecta a través de historias reales. Sin fotos, solo la magia de la voz.
             </p>
+
+            <div class="store-container" style="margin-top: 30px;">
+                <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="google-play-button">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" class="play-store-img">
+                </a>
+                <p class="store-hint">Dale a "Registrar" y sé de los primeros</p>
+            </div>
         </header>
 
         <section class="steps">
@@ -29,42 +36,44 @@
                 <div class="step-num">1</div>
                 <div class="step-content">
                     <h3>Vibe Check</h3>
-                    <p>Comunidad real. Verificamos cada perfil para tu seguridad.</p>
+                    <p>Comunidad real. Perfiles verificados para tu seguridad.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">2</div>
                 <div class="step-content">
                     <h3>Conecta de Verdad</h3>
-                    <p>Escucha lo que tienen que decir. Sin el estrés de los catálogos de fotos.</p>
+                    <p>Escucha lo que tienen que decir. Sin catálogos de fotos.</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-content">
                     <h3>Misterio Revelado</h3>
-                    <p>Tú decides cuándo mostrar tu imagen. El control es siempre tuyo.</p>
+                    <p>Las fotos perfil se revelan mientras hablais, solo cuando la conexión es real y mutua.</p>
                 </div>
             </div>
         </section>
 
-        <div class="cta-text">
-            <h3>Únete a la resistencia.</h3>
-            <p>Buscamos a las primeras 50 personas fundadoras de cada ciudad. Asegura tu acceso VIP antes del lanzamiento oficial.</p>
+        <div class="divider"><span><i class="fab fa-apple"></i></span></div>
+
+        <div class="cta-text ios-notice">
+            <h3>¿Usas iPhone?</h3>
+            <p>Misti llegará pronto a la App Store. Déjanos tu email y te avisaremos el día del lanzamiento.</p>
         </div>
 
-       <section class="waitlist-card" id="form-container">
+        <section class="waitlist-card" id="form-container">
             <form action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=00b393e0f0" method="POST" id="waitlist-form">
                 <input type="text" name="FNAME" placeholder="Tu nombre">
-                <input type="email" name="EMAIL" placeholder="Tu mejor email" required>
-                <input type="text" name="CITY" placeholder="Ciudad (ej. Madrid)">
+                <input type="email" name="EMAIL" placeholder="Tu email" required>
+                <input type="text" name="CITY" placeholder="Ciudad (ej. Zarautz)">
                 
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy" name="privacy" required>
                     <label for="privacy">Acepto la <a href="privacidad.html">Política de Privacidad</a></label>
                 </div>
 
-                <button type="submit">Reservar mi plaza VIP</button>
+                <button type="submit" class="btn-ios">Avísame cuando esté en ios</button>
             </form>
         </section>
 
@@ -85,12 +94,10 @@
     </main>
 
 <script>
-  // Script simplificado para asegurar que Mailchimp reciba los datos correctamente
   const form = document.getElementById("waitlist-form");
   const container = document.getElementById("form-container");
   
   form.addEventListener("submit", function() {
-    // Esto da una sensación visual de carga antes de que Mailchimp tome el control
     const btn = form.querySelector('button');
     btn.innerHTML = "Validando...";
     btn.style.opacity = "0.7";
