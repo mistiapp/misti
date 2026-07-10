@@ -195,7 +195,7 @@ input[type="checkbox"] {
 }
 
 .loader-logo img {
-    width: 100px; /* Un poco más grande al estar sola */
+    width: 200px; /* Un poco más grande al estar sola */
     height: auto;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
     /* Animación de entrada + respiración */
