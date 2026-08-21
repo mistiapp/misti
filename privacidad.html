@@ -8,24 +8,61 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Ajustes para lectura legal profesional */
-        .legal-card { text-align: left; max-width: 800px; margin: 0 auto; }
-        .legal-card h1 { font-family: 'Baloo 2', cursive; color: var(--primary); font-size: 2.2rem; margin-bottom: 5px; }
-        .effective-date { color: var(--text-gray); font-size: 0.85rem; margin-bottom: 30px; display: block; }
+        /* Alineación y centrado del contenedor legal */
+        .legal-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .legal-card { 
+            text-align: left; 
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin: 0 auto; 
+        }
+
+        .legal-card h1 { 
+            font-family: 'Baloo 2', cursive; 
+            color: #ffffff; 
+            font-size: 2.2rem; 
+            margin-bottom: 5px; 
+        }
+
+        .effective-date { 
+            color: var(--primary-light); 
+            font-size: 0.85rem; 
+            margin-bottom: 25px; 
+            display: block; 
+            font-weight: 600;
+        }
+
+        .legal-intro {
+            color: #ffffff;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
         
         .legal-section { margin-bottom: 35px; }
+        
         .legal-section h2 { 
             font-family: 'Baloo 2', cursive; 
-            color: var(--primary); 
-            font-size: 1.5rem; 
+            color: var(--primary-light); 
+            font-size: 1.4rem; 
             margin-bottom: 15px; 
-            border-bottom: 1px solid var(--primary-light);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             padding-bottom: 8px;
         }
         
         .legal-section p, .legal-section li { 
-            color: var(--text-gray); 
-            font-size: 1rem; 
+            color: var(--text-muted); 
+            font-size: 0.95rem; 
             line-height: 1.7; 
             margin-bottom: 12px;
         }
@@ -33,7 +70,7 @@
         .legal-section ul { padding-left: 20px; list-style-type: none; }
         .legal-section ul li::before {
             content: "•";
-            color: var(--primary);
+            color: var(--primary-light);
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -41,40 +78,48 @@
         }
 
         .highlight-box {
-            background: rgba(0, 95, 106, 0.05);
-            border-left: 4px solid var(--primary);
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--primary-light);
             padding: 15px 20px;
             margin: 20px 0;
             border-radius: 4px 12px 12px 4px;
         }
 
+        .highlight-box p {
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+
         .back-link { 
             display: inline-block; 
-            color: var(--primary); 
+            color: var(--primary-light); 
             text-decoration: none; 
-            font-weight: 800; 
-            margin-bottom: 25px; 
+            font-weight: 700; 
+            margin-bottom: 20px; 
             font-size: 0.95rem; 
+            transition: transform 0.2s ease;
         }
-        .back-link:hover { text-decoration: underline; }
+        .back-link:hover { 
+            text-decoration: underline; 
+            transform: translateX(-3px);
+        }
         
-        strong { color: var(--primary); font-weight: 700; }
-        .important { color: var(--text-dark); font-weight: 800; }
+        strong { color: #ffffff; font-weight: 700; }
+        .contact-email { color: var(--primary-light); font-size: 1.1rem; }
     </style>
 </head>
 <body>
 
     <div class="noise"></div>
-    <div class="glow"></div>
 
-    <main class="container" style="max-width: 750px;">
+    <main class="legal-wrapper">
         <a href="index.html" class="back-link">← Volver a Misti</a>
         
-        <article class="waitlist-card legal-card">
+        <article class="legal-card">
             <h1>Política de Privacidad</h1>
             <span class="effective-date">Fecha de Vigencia: 10 de Marzo de 2026</span>
 
-            <p class="sub-headline" style="color: var(--text-dark); font-weight: 500;">
+            <p class="legal-intro">
                 Bienvenido a Misti. Tu privacidad es nuestra prioridad absoluta. Esta política explica qué información recopilamos, cómo la protegemos y los derechos que tienes sobre ella.
             </p>
 
@@ -102,7 +147,7 @@
             <section class="legal-section">
                 <h2>3. Uso de la Información</h2>
                 <div class="highlight-box">
-                    <p class="important" style="margin-bottom: 0;">Jamás venderemos tus datos a terceros para fines comerciales o publicitarios.</p>
+                    <p style="margin-bottom: 0;">Jamás venderemos tus datos a terceros para fines comerciales o publicitarios.</p>
                 </div>
                 <ul>
                     <li><strong>Funcionamiento:</strong> Para mostrar tu perfil a usuarios compatibles y habilitar el chat.</li>
@@ -138,9 +183,9 @@
                 </ul>
             </section>
 
-            <section class="legal-section" style="margin-top: 50px; text-align: center;">
+            <section class="legal-section" style="margin-top: 40px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 25px;">
                 <p>Para dudas o reporte de incidentes de seguridad:</p>
-                <strong>misti.appoficial@gmail.com</strong>
+                <strong class="contact-email">support@mistisocial.com</strong>
             </section>
         </article>
 

@@ -1,101 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="google-site-verification" content="E-iQfotr7Z9DI8s6gxAMP_kg4Ziaa6E_RvD7F4HYjkI" />
+    <meta name="google-site-verification" content="SDraHPqKof3FhX2z7Es7QqbI7flGneqFLPKbkOYGBNk" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misti | Conexiones inesperadas</title>
+    <title>Misti | Conexiones Reales por Voz</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="preloader">
-    <div class="loader-content">
-        <div class="loader-logo">
-            <img src="img/logo-blanco.png" alt="Misti Isotipo">
-        </div>
-    </div>    
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="img/logo-blanco.png" alt="Misti Isotipo">
+            </div>
+        </div>    
     </div>
 
     <div class="noise"></div>
     
-    <main class="container">
-        <header class="hero">
-            <div class="logo-container">
-                <img src="img/logo-misti-blanco.png" alt="Misti Logo" class="main-logo">
-            </div>
-            <h1 class="headline">La personalidad importa</h1>
-            <p class="sub-headline">Conecta a través de historias reales. Sin fotos, solo la magia de la voz.</p>
+    <main class="main-wrapper">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- LOGO GRANDE JUSTO ENCIMA DEL TITULAR -->
+                <div class="logo-hero-container">
+                    <img src="img/logo-blanco.png" alt="Misti Logo" class="main-logo">
+                </div>
 
-            <div class="voice-wave">
-                <span></span><span></span><span></span><span></span><span></span>
-            </div>
+                <h1 class="headline">La personalidad importa</h1>
+                <p class="sub-headline">Conecta a través de historias e intereses reales. Sin superficialidad, solo la magia de la voz.</p>
 
-            <div class="store-container">
-                <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="google-play-button">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" class="play-store-img">
-                </a>
-                <p class="store-hint">Regístrate para ser de los primeros</p>
-            </div>
-        </header>
+                <div class="voice-wave">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
 
-        <section class="steps">
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                    <h3>Vibe Check</h3>
-                    <p>Comunidad real. Perfiles verificados para tu seguridad.</p>
+                <!-- BOTÓN GOOGLE PLAY -->
+                <div class="store-container hero-stores" id="download">
+                    <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="store-button">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" class="play-store-img hero-play">
+                    </a>
                 </div>
             </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                    <h3>Conecta de Verdad</h3>
-                    <p>Escucha lo que tienen que decir. Sin el estrés de las fotos.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                    <h3>Misterio Revelado</h3>
-                    <p>Las fotos se revelan mientras habláis, solo si la conexión es mutua.</p>
+
+            <!-- MOCKUP REALISTA DEL TELÉFONO -->
+            <div class="hero-mockup">
+                <div class="phone-container">
+                    <!-- Botones laterales físicos -->
+                    <div class="phone-btn phone-btn-vol-up"></div>
+                    <div class="phone-btn phone-btn-vol-down"></div>
+                    <div class="phone-btn phone-btn-power"></div>
+                    
+                    <!-- Chasis del teléfono -->
+                    <div class="phone-frame">
+                        <!-- Isla Dinámica -->
+                        <div class="phone-notch"></div>
+                        <!-- Reflejo de cristal arriba de la pantalla -->
+                        <div class="phone-glare"></div>
+                        <!-- Captura de pantalla -->
+                        <img src="img/IMG_3942.PNG" alt="Misti App Profile" class="phone-screen">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="divider"><span><i class="fab fa-apple"></i></span></div>
-
-        <section class="ios-section">
-            <div class="cta-text">
-                <h3>¿Usas iPhone?</h3>
-                <p>Déjanos tu email y te avisaremos en cuanto estemos en la App Store.</p>
+        <!-- SHOWCASE / PASOS DE LA APP -->
+        <section class="showcase-section">
+            <div class="section-title">
+                <h2>¿Cómo funciona Misti?</h2>
+                <p>Una nueva forma de conectar donde la vibra lo es todo</p>
             </div>
 
-            <div class="waitlist-card" id="form-container">
-                <form action="https://github.us11.list-manage.com/subscribe/post?u=ead66b78d48801788b2b1b8fa&amp;id=2c58651770&amp;f_id=00b393e0f0" method="POST" id="waitlist-form">
-                    <input type="text" name="FNAME" placeholder="Tu nombre">
-                    <input type="email" name="EMAIL" placeholder="Tu email" required>
-                    <input type="text" name="CITY" placeholder="Ciudad (ej. Zarautz)">
-                    
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">Acepto la <a href="privacidad.html">Privacidad</a></label>
+            <div class="cards-grid">
+                <!-- CARD 1 -->
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="img/IMG_3943.PNG" alt="Escucha historias">
+                    </div>
+                    <div class="card-text">
+                        <span class="step-badge">Paso 1</span>
+                        <h3>Escucha su voz</h3>
+                        <p>Olvídate del juicio visual instantáneo. Escucha audios y descubre quién hay detrás.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="img/IMG_3945.PNG" alt="Haz Match por Vibra">
+                    </div>
+                    <div class="card-text">
+                        <span class="step-badge highlight">Paso 2</span>
+                        <h3>¡Habéis conectado!</h3>
+                        <p>Si a los dos os mola la misma vibra, conectáis al instante para empezar a hablar.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="feature-card">
+                    <div class="card-image">
+                        <img src="img/IMG_3941.PNG" alt="Revela la foto">
+                    </div>
+                    <div class="card-text">
+                        <span class="step-badge">Paso 3</span>
+                        <h3>Desbloquea el perfil</h3>
+                        <p>A medida que habláis y la conversación fluye, las fotos e identidades reales se desvelan automáticamente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DE CONFIANZA -->
+        <section class="trust-banner">
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h4>100% Verificado</h4>
+                    <p>Perfiles revisados por humanos para tu seguridad.</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-heart"></i>
+                <div>
+                    <h4>Cero Presión</h4>
+                    <p>Conexiones auténticas sin la presión de las fotos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SOPORTE Y CONTACTO (REQUISITO APPLE APP STORE) -->
+        <section class="support-section" id="soporte">
+            <div class="support-card">
+                <div class="support-header">
+                    <i class="fas fa-headset support-icon"></i>
+                    <h2>Atención al Cliente y Soporte</h2>
+                    <p>¿Tienes alguna duda, consulta sobre tu cuenta o necesitas ayuda técnico-legal con la aplicación?</p>
+                </div>
+                
+                <div class="support-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Correo directo de soporte:</strong>
+                            <a href="mailto:support@mistisocial.com">support@mistisocial.com</a>
+                        </div>
                     </div>
 
-                    <button type="submit" class="btn-ios">Avisarme del lanzamiento</button>
-                </form>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Tiempo de respuesta:</strong>
+                            <p>Menos de 48 horas</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- CTA FINAL -->
+        <section class="cta-section">
+            <h2>¿Listo para tu próxima conexión real?</h2>
+            <p>Descarga Misti hoy mismo</p>
+            
+            <div class="store-container footer-stores">
+                <a href="https://play.google.com/store/apps/details?id=com.eainhoam.misti" target="_blank" class="store-button">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Google Play" class="play-store-img">
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="social-links">
-                <a href="https://www.tiktok.com/@mistisocial" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/mistiappoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mistisocial" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/mistisocial/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="legal-footer">
                 <span>© Misti 2026</span>
+                <span class="separator">|</span>
+                <a href="#soporte">Soporte</a>
                 <span class="separator">|</span>
                 <a href="privacidad.html">Privacidad</a>
             </div>
@@ -103,18 +188,12 @@
     </main>
 
     <script>
-        const form = document.getElementById("waitlist-form");
-        form.addEventListener("submit", () => {
-            form.querySelector('button').innerHTML = "Validando...";
-        });
-    </script>
-    <script>
     window.addEventListener('load', function() {
         const loader = document.getElementById('preloader');
         setTimeout(() => {
             loader.classList.add('hidden');
-        }, 800); // 800ms para que dé tiempo a verlo, como en Tinder
+        }, 600);
     });
-</script>
+    </script>
 </body>
 </html>
