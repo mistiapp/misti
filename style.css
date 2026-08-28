@@ -232,62 +232,66 @@ body {
     border-radius: 38px;
 }
 
-/* BOTONES DE TIENDA GENERALES */
+/* BOTONES DE TIENDA SIMÉTRICOS Y UNIFICADOS */
 .store-container { 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+}
+
+.hero-stores {
+    margin-top: 10px;
+}
+
+@media (max-width: 899px) {
+    .hero-stores { 
+        justify-content: center; 
+    }
+}
+
+.footer-stores {
+    justify-content: center;
+    width: 100%;
 }
 
 .store-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    height: 52px;
     text-decoration: none;
+    border-radius: 9px; /* Curvatura idéntica a la insignia de Apple */
+    overflow: hidden; /* Asegura que el contenido respete los bordes */
+}
+
+.store-button img {
+    transition: transform 0.2s ease;
 }
 
 .store-button:hover img { 
-    transform: scale(1.05); 
+    transform: scale(1.04); 
 }
 
-/* BOTONES SUPERIORES (HERO) - MÁS GRANDES */
-.hero-stores {
-    margin-top: 10px;
-}
-
-@media (max-width: 899px) {
-    .hero-stores { justify-content: center; }
-}
-
-.play-store-img.hero-play { 
-    height: 75px; /* Un poco más grandes */
-    width: auto;
-}
-
-.app-store-img.hero-app {
-    height: 53px; /* Escala idéntica a Play Store */
-    width: auto;
-    border-radius: 7px;
-}
-
-/* BOTONES INFERIORES (CENTRADOS) */
-.footer-stores {
-    justify-content: center;
-    width: 100%;
-}
-
-.play-store-img { 
-    height: 65px;
-    width: auto;
-}
-
+/* App Store Image */
 .app-store-img {
-    height: 46px;
+    height: 52px;
     width: auto;
-    border-radius: 6px;
+    object-fit: contain;
 }
 
+/* Google Play Image (con borde simulado fino idéntico) */
+.play-store-img {
+    height: 78px;
+    width: auto;
+    margin: -13px;
+    object-fit: contain;
+    border-radius: 20px;
+    /* Recorta la imagen a 52px, añade bordes redondeados de 9px y el borde fino blanco al 30% de opacidad */
+    clip-path: inset(13px round 9px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+}
 /* SHOWCASE Y CARDS MEJORADAS */
 .showcase-section { margin: 80px 0; }
 .section-title { text-align: center; margin-bottom: 50px; }
