@@ -212,5 +212,38 @@
         }, 600);
     });
     </script>
+    <!-- BANNER DE COOKIES -->
+<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: #18181b; color: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); font-family: 'Inter', sans-serif; font-size: 14px; z-index: 999999; display: none; border: 1px solid rgba(255,255,255,0.1);">
+    <p style="margin: 0 0 12px 0; line-height: 1.4; color: #e4e4e7;">
+        Usamos cookies analíticas para entender cómo interactúas con la web y mejorar tu experiencia. Consulta nuestra <a href="privacidad.html" style="color: #a855f7; text-decoration: underline;">Política de Privacidad</a>.
+    </p>
+    <div style="display: flex; gap: 10px;">
+        <button id="accept-cookies" style="flex: 1; background: #a855f7; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s;">Aceptar</button>
+        <button id="decline-cookies" style="flex: 1; background: rgba(255,255,255,0.1); color: #ccc; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;">Rechazar</button>
+    </div>
+</div>
+
+<script>
+window.addEventListener('load', function() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    // Comprobar si el usuario ya ha elegido
+    if (!localStorage.getItem('misti_cookie_consent')) {
+        banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('misti_cookie_consent', 'accepted');
+        banner.style.display = 'none';
+    });
+
+    declineBtn.addEventListener('click', function() {
+        localStorage.setItem('misti_cookie_consent', 'declined');
+        banner.style.display = 'none';
+    });
+});
+</script>
 </body>
 </html>
